@@ -15,7 +15,7 @@ namespace ProdutorMensagem.fila
             var nomeFilaEmail = sessaoStorage.GetSection("FilaEmail").Value;
             var storageConnectionString = sessaoStorage.GetSection("StorageConnectionString").Value;
 
-            queueClient = new QueueClient(storageConnectionString, nomeFilaEmail, );            
+            queueClient = new QueueClient(storageConnectionString, nomeFilaEmail);
         }
         public async Task PublicarMensagemAsync(MensagemEmail mensagem)
         {
